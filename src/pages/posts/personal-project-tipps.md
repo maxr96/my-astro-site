@@ -1,7 +1,7 @@
 ---
 title: '7 Things to Consider When Working On a Personal Project'
 excerpt: 'Starting a personal project is a cool thing to do, but there are a lot of factors that can distract you from finishing your project. In this post, I collected 7 tips from my personal experience and I hope you can learn 📘 from my mistakes.'
-coverImage: '/public/personal-project-tipps/cover.jpg'
+coverImage: '/personal-project-tipps/cover.jpg'
 date: '2022-09-26T22:33:00.001Z'
 tags: 'Career Development, Learning'
 ---
