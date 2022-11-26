@@ -1,0 +1,19 @@
+---
+interface Props {
+    title: string
+  src: string
+  slug?: string
+}
+
+const {title, src, slug} = Astro.props;
+---
+
+<div class="sm:mx-0">
+    <a aria-label={title} href={`/posts/${slug}`}>
+        <img
+            src={src}
+            alt={`Cover Image for ${title}`}
+            class=""
+        />
+    </a>
+</div>
