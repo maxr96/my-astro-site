@@ -1,0 +1,1 @@
+This is a repository for a personal blog that is built on top of Astro framework using TypeScript to make it typesafe and TailwindCSS to make styling easier and more consistent. It uses SSG to generate blog articles from Markdown files.
