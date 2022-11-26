@@ -1,13 +1,13 @@
 ---
-import CoverImage from './CoverImage.astro'
-import DateFormatter from './DateFormatter.astro'
+import CoverImage from '../post/CoverImage.astro'
+import DateFormatter from '../DateFormatter.astro'
 
 interface Props {
   title: string
   coverImage: string
   date: string
   excerpt: string
-  slug: string
+  slug?: string
   // category: string
 }
 
