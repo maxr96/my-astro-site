@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon";
+
+---
+
+<BaseLayout>
+    <div class="gap-8 flex flex-col items-center justify-center space-x-4 font-handlee text-lg">
+    <h1 class="text-blue-700 font-bold subpixel-antialiased text-xl dark:text-blue-300">
+        Hello fellow developers 🤘
+    </h1>
+    <img
+        src="/about-me/me.webp"
+        alt="My picture"
+        class="w-52 h-52 rounded-full shadow-xl shadow-blue-500 hover:scale-110"
+    />
+    <div class="flex gap-5">
+        <a href="https://github.com/maxr96">
+        <Icon name="fa-brands:github" size="4x"/>
+        </a>
+        <a href="https://www.linkedin.com/in/maksymradcuk/">
+        <Icon name="fa-brands:linkedin" size="4x" />
+        </a>
+    </div>
+    <p>
+        I&apos;m a full stack developer that enjoys building complex web
+        applications from the ground up. I have three years of experience in
+        a startup that pushed the usage of new technologies and taught me to
+        adapt to ever-changing requirements.
+    </p>
+    <p>
+        In my previous job, I was supporting a business-critical middleware
+        that provides communication between all the systems in the bank. For
+        more than a year, I am working on an authorisation service that we
+        extracted from the monolith and now it serves millions of requests
+        every day and helps HR Managers to manage their employees and give
+        them access to the data they need.
+    </p>
+    <p class="font-bold">I am experienced 🤓 in:</p>
+    <ul class="list-disc list-inside space-y-10">
+        <li>
+        <span class="text-blue-700 font-bold dark:text-blue-300">
+            Back-end development{' '}
+        </span>
+        - Building back-end using both{' '}
+        <span class="text-violet-700 font-semibold">
+            <Icon name="fa-brands:microsoft" size="1x" class="inline-block mb-2"/> ASP.NET Core{' '}
+        </span>{' '}
+        and{' '}
+        <span class="text-green-700 font-semibold">
+            <Icon name="fa-brands:java" size="1x" class="inline-block mb-2"/> Spring Boot
+        </span>{' '}
+        to create both RESTful and GraphQL APIs. I have production
+        experience with OrientDB with Entity Framework Core and PostgreSQL
+        with jOOQ to store, mutate and efficiently query the data. Set up
+        and managed Matomo for web analytics.
+        </li>
+        <li>
+        <span class="text-blue-700 font-bold dark:text-blue-300">
+            Front-end development{' '}
+        </span>
+        - Building{' '}
+        <span class="text-red-700 font-semibold">
+            <Icon name="fa-brands:angular" size="1x" class="inline-block mb-2"/> Angular
+        </span>{' '}
+        and{' '}
+        <span class="text-blue-700 font-semibold">
+            <Icon name="fa-brands:react" size="1x" class="inline-block mb-2"/> React{' '}
+        </span>
+        applications using{' '}
+        <span class="text-blue-700 font-semibold">
+            {' '}
+            <Icon name="fa-brands:js" size="1x" class="inline-block mb-2"/> TypeScript
+        </span>{' '}
+        ,
+        <span class="text-orange-700 font-semibold">
+            {' '}
+            <Icon name="fa-brands:html5" size="1x" class="inline-block mb-2"/> HTML5
+        </span>{' '}
+        and{' '}
+        <span class="text-blue-700 font-semibold">
+            {' '}
+            <Icon name="fa-brands:css3" size="1x" class="inline-block mb-2"/> CSS3
+        </span>{' '}
+        . Most used libraries: RxJS, D3.js, Apollo Client, Material UI,
+        Ngx-Charts/Graphs and Tailwind CSS.
+        </li>
+        <li>
+        <span class="text-blue-700 font-bold dark:text-blue-300">
+            Dev Ops{' '}
+        </span>
+        - Manage a microservice that is hosted on{' '}
+        <span class="text-yellow-700 font-semibold">
+            {' '}
+            <Icon name="fa-brands:aws" size="1x" class="inline-block mb-2"/> AWS
+        </span>{' '}
+        and operate inside of a set of pods in a Kubernetes cluster,
+        including more in-depth experience with AWS RDS, Elasticache and
+        S3. Extensively use Datadog and Sentry to proactively monitor and
+        operate on the state of an application.
+        </li>
+    </ul>
+    <p class="font-semibold">
+        Here I share my learnings and the projects I work on in my free
+        time. I am always open to learning new things and following the
+        Learning-by-doing approach.
+    </p>
+    </div>
+</BaseLayout>
