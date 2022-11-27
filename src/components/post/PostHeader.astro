@@ -1,0 +1,31 @@
+---
+import DateFormatter from '../DateFormatter.astro';
+import PostTitle from './PostTitle.astro';
+import CoverImage from './CoverImage.astro';
+import PostTag from './PostTag.astro';
+
+interface Props {
+  title: string
+  coverImage: string
+  date: string
+  tags: string
+}
+
+const {title, coverImage, date, tags } = Astro.props;
+---
+<>
+    <PostTitle title={title}></PostTitle>
+    <div class="mb-8 md:mb-16 sm:mx-0">
+        <CoverImage title={title} src={coverImage} />
+    </div>
+    <div class="max-w-9xl mx-auto">
+        <div class="mb-6 text-lg">
+            <DateFormatter dateString={date} />
+        </div>
+        <div>
+        {tags.split(',').map((tag) => (
+            <PostTag tag={tag}></PostTag>
+        ))}
+        </div>
+    </div>
+</>
