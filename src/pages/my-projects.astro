@@ -1,0 +1,55 @@
+---
+import Icon from "astro-icon";
+import ProjectItem from "../components/ProjectItem.astro";
+import BaseLayout from "../layouts/BaseLayout.astro"
+
+---
+
+<BaseLayout title="My Projects | MAX DEV">
+    <div class="mx-auto flex flex-row flex-wrap gap-5 justify-center">
+        <ProjectItem
+          title="Recipe App Backend"
+          link="https://github.com/maxr96/Recipy-App-Server"
+        >
+          <>
+            {' '}
+            Provides a REST API, which provides basic CRUD operations on
+            recipes, that contain extensive data like cooking steps,
+            ingredients, description, image, etc. Additionally, it has basic
+            sign up/log in flow. Build with{' '}
+            <span class="text-green-700 font-semibold">
+                <Icon name="fa-brands:java" size="1x" class="inline-block mb-1"/> Spring Boot
+            </span>{' '}
+            using Kotlin and Gradle.
+          </>
+        </ProjectItem>
+        <ProjectItem
+          title="Recipe App Frontend"
+          link="https://github.com/maxr96/Recipe-App"
+        >
+          <>
+            Provides a Front End to the Recipe Server that has a login system
+            and the ability to view all the recipes and is built using{' '}
+            <span class="text-red-700 font-semibold">
+                <Icon name="fa-brands:angular" size="1x" class="inline-block mb-1"/> Angular
+            </span>{' '}
+            .
+          </>
+        </ProjectItem>
+        <ProjectItem
+          title="Full Stack Dev Blog"
+          link="https://github.com/maxr96/personal-blog"
+        >
+          <>
+            This blog is powered by some awesome technologies like Next.js a
+            framework that allows me to build a fast and SEO-friendly website,
+            TailwindCSS that makes styling more consistent and{' '}
+            <span class="text-blue-700 font-semibold">
+              {' '}
+              <Icon name="fa-brands:js" size="1x" class="inline-block mb-1"/> TypeScript
+            </span>{' '}
+            to add a bit of type safety to the mix.
+          </>
+        </ProjectItem>
+      </div>
+</BaseLayout>

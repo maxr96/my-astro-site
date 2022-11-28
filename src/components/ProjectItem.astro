@@ -1,0 +1,26 @@
+---
+import Icon from 'astro-icon';
+
+interface Props {
+    title: string
+    link: string
+}
+
+const {title, link} = Astro.props
+---
+<div class="shadow-xl border border-gray-100 rounded-lg max-w-sm dark:border-gray-800">
+    <div class="p-5 flex flex-col min-h-full">
+        <a href={link}>
+            <h5 class="font-bold text-2xl tracking-tight mb-2">{title}</h5>
+        </a>
+        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400 grow">
+            <slot/>
+        </p>
+        <a
+            href={link}
+            class="self-end text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+            Check it out on &nbsp;<Icon name="fa-brands:github" size="2x"/>
+        </a>
+    </div>
+</div>
