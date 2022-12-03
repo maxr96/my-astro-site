@@ -1,0 +1,16 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { MarkdownInstance } from 'astro';
+import type Post from '../types/post';
+import MorePosts from '../components/post/MorePosts.astro';
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob<MarkdownInstance<Post>>('./posts/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+).map((post) => { return {...post.frontmatter, slug: post.url}});
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+    <MorePosts posts={posts}/>
+</BaseLayout>
