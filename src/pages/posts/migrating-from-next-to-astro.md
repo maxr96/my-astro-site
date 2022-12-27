@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: 'Moving Blog from Next.js to Astro'
+title: 'Moving My Blog from Next.js to Astro'
 excerpt: 'Recently I heard a lot of praise comments about Astro. How easy it is to use it for static websites and how performant it can be due to the Zero JS by default. I decided to give it a try and share my learnings here 📘.'
 coverImage: '/migrating-next-to-astro/cover.webp'
 date: '2022-12-27T23:33:00.001Z'
