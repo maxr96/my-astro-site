@@ -18,7 +18,7 @@ const {title, coverImage, date, excerpt, slug} = Astro.props
       <CoverImage slug={slug} title={title} src={coverImage} />
     </div>
     <h3 class="text-3xl mb-3 leading-snug">
-      <a class="hover:underline" href={slug}>
+      <a class="hover:underline" href={slug} rel="prefetch">
         {title}
       </a>
     </h3>

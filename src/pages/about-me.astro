@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Icon } from "astro-icon";
 import '@fontsource/handlee';
+import me from '../assets/about-me/me.webp'
 
 ---
 
@@ -11,7 +12,7 @@ import '@fontsource/handlee';
         Hello fellow developers 🤘
     </h1>
     <img
-        src="/about-me/me.webp"
+        src={me}
         alt="My picture"
         class="w-52 h-52 rounded-full shadow-xl shadow-blue-500 hover:scale-110"
     />
