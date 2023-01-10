@@ -1,11 +1,15 @@
-type PostType = {
+export type PostType = {
   slug?: string
   title: string
   pubDate: string
-  coverImage: string
+  coverImage: CoverImageType
   excerpt: string
   content: string
   tags: string
 }
 
-export default PostType
+export type CoverImageType = {
+  src: string
+  width: string
+  height: string
+}

@@ -1,19 +1,21 @@
 ---
+import type { CoverImageType } from '../../types/post';
+
 interface Props {
     title: string
-    src: string
+    image: CoverImageType,
     slug?: string
 }
 
-const {title, src, slug} = Astro.props;
+const {title, image, slug} = Astro.props;
 ---
 
 <div class="sm:mx-0">
     <a aria-label={title} href={slug}>
         <img
-            src={src}
-            width="800px"
-            height="418px"
+            src={image.src}
+            width={image.width}
+            height={image.height}
             alt={`Cover Image for ${title}`}
             class="shadow-sm hover:shadow-lg transition-shadow duration-200 w-full"
         />

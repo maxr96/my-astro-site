@@ -2,7 +2,10 @@
 layout: ../../layouts/BlogPost.astro
 title: 'Moving My Blog from Next.js to Astro'
 excerpt: 'Recently I heard a lot of praise comments about Astro. How easy it is to use it for static websites and how performant it can be due to the Zero JS by default. I decided to give it a try and share my learnings here 📘.'
-coverImage: '/migrating-next-to-astro/cover.webp'
+coverImage:
+  src: '/migrating-next-to-astro/cover.webp'
+  width: 1280px
+  height: 853px
 pubDate: 2022-12-27T23:33:00.001Z
 tags: 'Learning, Front End'
 ---
@@ -47,15 +50,15 @@ If you want to do your own comparison Next.JS version of my blog is available at
 
 First, let's look at the **Main Page**. It is a pretty simple page with a navigation header, footer, theme toggle (which we will talk a bit later about), and 2 images - bigger for the post and smaller for the logo.
 
-<img src="/migrating-next-to-astro/main_next.webp" alt="Main Page with Next.js">_Main Page with Next.js_
-<img src="/migrating-next-to-astro/main_astro.webp" alt="Main Page with Astro">_Main Page with Astro_
+<img src="/migrating-next-to-astro/main_next.webp" alt="Main Page with Next.js" width="944px" height="699px">_Main Page with Next.js_
+<img src="/migrating-next-to-astro/main_astro.webp" alt="Main Page with Astro" width="942px" height="702px">_Main Page with Astro_
 
 Based on the results you can see that Astro was able to perform slightly better in terms of an overall performance score. If we look at the Performance details the biggest difference is in the Largest Contentful Paint (LCP) metric. This metric is one of the key metrics as it marks the point in the page timeline when the main content has loaded. LCP is 2 times faster with Astro than with Next.JS. Please, ignore the Accessibility score, I did a few changes in that regard to the Astro application, but that doesn't affect Performance.
 
 The second page is an **About Me** page. Here we are using a different font that is being retrieved from the server, we also load quite a few SVG images and an image of myself. This page is a bit heavier than the previous one, but still, we can get a perfect 100 with Astro.
 
-![alt text](/migrating-next-to-astro/about_me_next.webp)_About Me Page with Next.js_
-![alt text](/migrating-next-to-astro/about_me_astro.webp)_About Me Page with Astro_
+<img src="/migrating-next-to-astro/about_me_next.webp" alt="Main Page with Next.js" width="947px" height="695px">_About Me Page with Next.js_
+<img src="/migrating-next-to-astro/about_me_astro.webp" alt="Main Page with Astro" width="938px" height="700px">_About Me Page with Astro_
 
 The performance difference is even more obvious in this one. The score with Next.JS is now down to the yellow category, while with Astro we still get a perfect 100. The difference in LCP is even bigger now, the site becomes interactive in only 1.1s and there is no blocking time with Astro.
 

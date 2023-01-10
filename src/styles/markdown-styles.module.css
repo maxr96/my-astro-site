@@ -31,7 +31,7 @@
 }
 
 .markdown img + em {
-  @apply block py-2 mx-auto w-1/2 text-center not-italic font-semibold;
+  @apply block pt-1 pb-6 mx-auto w-1/2 text-center not-italic font-semibold;
 }
 
 .markdown :not(pre) > code {
