@@ -2,23 +2,18 @@
 import PostHeader from "../components/post/PostHeader.astro";
 import BaseLayout from "./BaseLayout.astro";
 import markdownStyles from '../styles/markdown-styles.module.css'
+import type PostType from "../types/post";
 
 export interface Props {
-	content: {
-		title: string;
-		description: string;
-		pubDate: string;
-		tags: string;
-		coverImage: string;
-	};
+	content: PostType
 }
 
 const {
-	content: { title, description, pubDate, tags, coverImage },
+	content: { title, excerpt, pubDate, tags, coverImage },
 } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={excerpt} image={coverImage}>
 	<article class="mb-32">
 		<PostHeader
 		title={title}

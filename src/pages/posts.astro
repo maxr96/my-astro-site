@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_DESCRIPTION } from '../config';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { MarkdownInstance } from 'astro';
 import type Post from '../types/post';
@@ -11,6 +11,6 @@ const posts = (await Astro.glob<MarkdownInstance<Post>>('./posts/*.{md,mdx}')).s
 ).map((post) => { return {...post.frontmatter, slug: post.url}});
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<BaseLayout title="Posts">
     <MorePosts posts={posts}/>
 </BaseLayout>
