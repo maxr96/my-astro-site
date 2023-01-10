@@ -8,7 +8,7 @@ import MorePosts from '../components/post/MorePosts.astro';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob<MarkdownInstance<Post>>('./posts/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 const heroPost = posts[0];
 const morePosts = posts.slice(1).map((post) => { return {...post.frontmatter, slug: post.url}});
@@ -18,7 +18,7 @@ const morePosts = posts.slice(1).map((post) => { return {...post.frontmatter, sl
 	<HeroPost 
 		title={heroPost.frontmatter.title} 
 		coverImage={heroPost.frontmatter.coverImage}
-		date={heroPost.frontmatter.date}
+		date={heroPost.frontmatter.pubDate}
 		slug={heroPost.url}
 		excerpt={heroPost.frontmatter.excerpt}
 	/>

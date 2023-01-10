@@ -7,11 +7,11 @@ import PostTag from './PostTag.astro';
 interface Props {
   title: string
   coverImage: string
-  date: string
+  pubDate: string
   tags: string
 }
 
-const {title, coverImage, date, tags } = Astro.props;
+const {title, coverImage, pubDate, tags } = Astro.props;
 ---
 <>
     <PostTitle title={title}></PostTitle>
@@ -20,7 +20,7 @@ const {title, coverImage, date, tags } = Astro.props;
     </div>
     <div class="max-w-9xl mx-auto">
         <div class="mb-6 text-lg">
-            <DateFormatter dateString={date} />
+            <DateFormatter dateString={pubDate} />
         </div>
         <div>
         {tags.split(',').map((tag) => (

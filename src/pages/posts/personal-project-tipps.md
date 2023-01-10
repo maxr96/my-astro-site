@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: '7 Things to Consider When Working On a Personal Project'
 excerpt: 'Starting a personal project is a cool thing to do, but there are a lot of factors that can distract you from finishing your project. In this post, I collected 7 tips from my personal experience and I hope you can learn 📘 from my mistakes.'
 coverImage: '/personal-project-tipps/cover.webp'
-date: '2022-09-26T22:33:00.001Z'
+pubDate: 2022-09-26T22:33:00.001Z
 tags: 'Career Development, Learning'
 ---
 
@@ -11,7 +11,7 @@ Starting a personal project is a cool thing to do, but there are a lot of factor
 
 ## Choose a project idea that you are passionate about
 
-No matter what you like more 🐈 or 🐕, reading 📚 or watching 🎥 - you should choose a project based on your personal preferences. For example, I like to 🧑‍🍳 in my free time for myself and my wife. So I decided to build a recipe app, where I can upload different recipes, search for them and view a very detailed process on how to prepare them. Your tastes might be different. You may want to build your *To-Do* app or a *URL Shortener*. But usually, the best ideas will come if you find yourself in a position where you are missing particular functionality from existing tools. In this case, you could end up building a project that many people will find usable and potentially you can build your own company out of it (you never know!). 
+No matter what you like more 🐈 or 🐕, reading 📚 or watching 🎥 - you should choose a project based on your personal preferences. For example, I like to 🧑‍🍳 in my free time for myself and my wife. So I decided to build a recipe app, where I can upload different recipes, search for them and view a very detailed process on how to prepare them. Your tastes might be different. You may want to build your _To-Do_ app or a _URL Shortener_. But usually, the best ideas will come if you find yourself in a position where you are missing particular functionality from existing tools. In this case, you could end up building a project that many people will find usable and potentially you can build your own company out of it (you never know!).
 
 ## Don't follow blindly tutorials on the Internet
 
@@ -25,13 +25,13 @@ Setting small goals is the best way to let you enjoy the process constantly. Whe
 
 It is always nice to learn and follow the best practices from the community like proper folder structure for your project, following all the naming conventions and extracting the interface for the class. But most of them are useful only when you are working on a big team or you have a huge project. So instead of immediately going to a popular repository and copying their structure, you should aim for starting things simple and improving/changing the structure naturally as your project grows.
 
-In my experience, in my recipe book *Angular* app I used a Redux-like state management library called *NgRX*. While it is a cool library and brings benefits for bigger projects, in my small project it only complicated things as after just a few weeks I couldn't remember how exactly everything was wired up and what I have to do to add some extra data to the state. If I would go with a simpler approach first (like using built-in services in my Angular app) I wouldn't have had those issues. And if I would later observe that this doesn't fit my use case anymore, it would be easier for me to switch to a more sophisticated solution than doing it in a reverse direction.
+In my experience, in my recipe book _Angular_ app I used a Redux-like state management library called _NgRX_. While it is a cool library and brings benefits for bigger projects, in my small project it only complicated things as after just a few weeks I couldn't remember how exactly everything was wired up and what I have to do to add some extra data to the state. If I would go with a simpler approach first (like using built-in services in my Angular app) I wouldn't have had those issues. And if I would later observe that this doesn't fit my use case anymore, it would be easier for me to switch to a more sophisticated solution than doing it in a reverse direction.
 
 ## Stick to the tools you chose in the beginning
 
-This is true for any programming language, but especially, if you are a *JS* developer as you can see a new framework/library being born 👶 every day. But before you jump on the hype train, ask yourself some of the following questions: 
+This is true for any programming language, but especially, if you are a _JS_ developer as you can see a new framework/library being born 👶 every day. But before you jump on the hype train, ask yourself some of the following questions:
 
-- Why did you start doing your project with the current tools? 
+- Why did you start doing your project with the current tools?
 - Were you trying to get some experience in them before you can apply for work 💼? If the answer is yes, then will this new shiny tool help you to achieve that? The answer here is usually no. As ✨ new tools are rarely used in the industry, they need to pass the test of time and be polished so they don't have any surprises, which you might also encounter and get stuck.
 - Is there any real functionality that you are missing with the current tools and there is no way to easily replicate it or is it just the new tool is looking nicer or advertised as faster?
 
@@ -44,7 +44,7 @@ Put the most necessary things and deliver your project as an MVP 🚀. MVP will 
 ## Share your project with others
 
 Once you build an MVP, it is time to share 📤 your project with the world. Nowadays it is super easy to do. First of all, make your project repository open on platforms like GitHub or GitLab. Next, you can create a small blog post about your project and post it on one of the awesome websites like [Medium](https://medium.com/), [Hashnode](https://hashnode.com)
- or [Dev.to](https://dev.to/). Last, but not least share it on any social media like [Twitter](https://twitter.com/), [LinkedIn](https://www.linkedin.com/) or even [YouTube](https://www.youtube.com/) with your friends and followers. 
+or [Dev.to](https://dev.to/). Last, but not least share it on any social media like [Twitter](https://twitter.com/), [LinkedIn](https://www.linkedin.com/) or even [YouTube](https://www.youtube.com/) with your friends and followers.
 
 You should not fear sharing your work, nobody will punish you for not providing the best solution possible, instead sharing your project helps you to get feedback from other developers like yourself. They can give you 💎 advices on your project structure, provide fresh ideas to work on or even find a bug that you didn't notice.
 

@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: 'Moving My Blog from Next.js to Astro'
 excerpt: 'Recently I heard a lot of praise comments about Astro. How easy it is to use it for static websites and how performant it can be due to the Zero JS by default. I decided to give it a try and share my learnings here 📘.'
 coverImage: '/migrating-next-to-astro/cover.webp'
-date: '2022-12-27T23:33:00.001Z'
+pubDate: 2022-12-27T23:33:00.001Z
 tags: 'Learning, Front End'
 ---
 
@@ -67,7 +67,7 @@ Next.JS tries to hide away and abstract most of the details about how it is buil
 
 When writing Astro components you will be using a JSX template, but still having conventional HTML tags so you can copy any HTML part from the web and it will be a valid JSX for Astro. When compared to Next.JS since it uses React it provides abstractions that are a bit different, like the infamous `className` instead of the conventional `class`.
 
-Another interesting thing is how each Astro component is defined. You have your front matter first - the code that will be executed on the server, <script> part, a <styles> part, and finally your actual content. This idea was borrowed from Vue. It has its drawbacks and benefits. Personally, since I use Tailwind I don't even need to specify the <styles> part, but if you want you to have the option.
+Another interesting thing is how each Astro component is defined. You have your front matter first - the code that will be executed on the server, `<script>` part, a `<styles>` part, and finally your actual content. This idea was borrowed from Vue. It has its drawbacks and benefits. Personally, since I use Tailwind I don't even need to specify the `<styles>` part, but if you want you to have the option.
 
 ## Easy to write code executed on the server
 

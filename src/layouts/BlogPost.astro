@@ -7,14 +7,14 @@ export interface Props {
 	content: {
 		title: string;
 		description: string;
-		date: string;
+		pubDate: string;
 		tags: string;
 		coverImage: string;
 	};
 }
 
 const {
-	content: { title, description, date, tags, coverImage },
+	content: { title, description, pubDate, tags, coverImage },
 } = Astro.props;
 ---
 
@@ -23,7 +23,7 @@ const {
 		<PostHeader
 		title={title}
 		coverImage={coverImage}
-		date={date}
+		pubDate={pubDate}
 		tags={tags}
 	  />
 	  <div class={markdownStyles['markdown']}>
