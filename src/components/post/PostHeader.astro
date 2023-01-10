@@ -23,7 +23,7 @@ const {title, coverImage, pubDate, tags } = Astro.props;
         <div class="mb-6 text-lg">
             <DateFormatter dateString={pubDate} />
         </div>
-        <div>
+        <div class="flex gap-x-2">
         {tags.split(',').map((tag) => (
             <PostTag tag={tag}></PostTag>
         ))}

@@ -4,11 +4,11 @@ interface Props {
 }
 
 const {dateString} = Astro.props
-const formattedDate = new Date(dateString).toLocaleDateString('en-us', {
+const formattedDate = new Date(dateString).toLocaleDateString('en-gb', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
 })
 ---
 
-<time datetime={dateString}>{formattedDate}</time>
+<time class="italic" datetime={dateString}>{formattedDate}</time>
