@@ -23,12 +23,16 @@ const pages = [
       <div class="w-auto block">
         <ul class="flex justify-between items-center mt-0 text-sm font-medium flex-row md:space-x-8 lg:text-lg">
           {pages.map(({ href, title }) => (
-            <HeaderLink
-              href={href}
-              title={title}
-            />
+            <li>
+              <HeaderLink
+                href={href}
+                title={title}
+              />
+            </li>
           ))}
-          <ThemeToggleButton/>
+          <li>
+            <ThemeToggleButton/>
+          </li>
         </ul>
       </div>
     </div>
