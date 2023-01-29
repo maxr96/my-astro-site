@@ -1,12 +1,11 @@
 ---
 import CoverImage from '../post/CoverImage.astro'
 import DateFormatter from '../DateFormatter.astro'
-import type { CoverImageType } from '../../types/post'
 
 interface Props {
     title: string
-    coverImage: CoverImageType
-    date: string
+    coverImage: {src: string, width: number, height: number}
+    date: Date
     excerpt: string
     slug?: string
 }
@@ -24,7 +23,7 @@ const {title, coverImage, date, excerpt, slug} = Astro.props
       </a>
     </h3>
     <div class="text-lg mb-4">
-      <DateFormatter dateString={date} />
+      <DateFormatter date={date} />
     </div>
     <p class="text-lg leading-relaxed mb-4">{excerpt}</p>
   </div>

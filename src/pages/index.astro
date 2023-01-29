@@ -1,26 +1,25 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import type { MarkdownInstance } from 'astro';
 import HeroPost from '../components/post/HeroPost.astro';
 import MorePosts from '../components/post/MorePosts.astro';
-import type { PostType } from '../types/post';
+import { getCollection } from 'astro:content';
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob<MarkdownInstance<PostType>>('./posts/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-);
+// Use getCollection to fetch all posts, and then sort them by date.
+const posts = await getCollection('posts')
+	.then(it => it.sort((a,b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()));
+	
 const heroPost = posts[0];
-const morePosts = posts.slice(1).map((post) => { return {...post.frontmatter, slug: post.url}});
+const morePosts = posts.slice(1);
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<HeroPost 
-		title={heroPost.frontmatter.title} 
-		coverImage={heroPost.frontmatter.coverImage}
-		date={heroPost.frontmatter.pubDate}
-		slug={heroPost.url}
-		excerpt={heroPost.frontmatter.excerpt}
+		title={heroPost.data.title} 
+		coverImage={heroPost.data.coverImage}
+		date={heroPost.data.pubDate}
+		slug={heroPost.slug}
+		excerpt={heroPost.data.excerpt}
 	/>
   {morePosts.length > 0 && <MorePosts posts={morePosts}/>}
 </BaseLayout>

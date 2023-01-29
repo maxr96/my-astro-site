@@ -1,0 +1,33 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import PostHeader from '../components/post/PostHeader.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import markdownStyles from '../styles/markdown-styles.module.css'
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('posts');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+// 2. When it's time to render, you can get the entry directly from the prop
+interface Props {
+  entry: CollectionEntry<'posts'>;
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<BaseLayout title={entry.data.title} description={entry.data.excerpt} image={entry.data.coverImage.src}>
+	<article class="mb-32">
+		<PostHeader
+		title={entry.data.title}
+		coverImage={entry.data.coverImage}
+		pubDate={entry.data.pubDate}
+		tags={entry.data.tags}
+	  />
+	  <div class={markdownStyles['markdown']}>
+        <Content />
+      </div>
+    </article>
+</BaseLayout>

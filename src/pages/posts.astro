@@ -1,13 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import type { MarkdownInstance } from 'astro';
 import MorePosts from '../components/post/MorePosts.astro';
-import type { PostType } from '../types/post';
+import { getCollection } from 'astro:content';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob<MarkdownInstance<PostType>>('./posts/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-).map((post) => { return {...post.frontmatter, slug: post.url}});
+const posts = await getCollection('posts')
+	.then(it => it.sort((a,b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()));
 ---
 
 <BaseLayout title="Posts">

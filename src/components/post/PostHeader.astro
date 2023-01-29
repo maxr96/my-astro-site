@@ -3,13 +3,12 @@ import DateFormatter from '../DateFormatter.astro';
 import PostTitle from './PostTitle.astro';
 import CoverImage from './CoverImage.astro';
 import PostTag from './PostTag.astro';
-import type { CoverImageType } from '../../types/post';
 
 interface Props {
   title: string
-  coverImage: CoverImageType
-  pubDate: string
-  tags: string
+  coverImage: {src: string, width: number, height: number},
+  pubDate: Date
+  tags: string[]
 }
 
 const {title, coverImage, pubDate, tags } = Astro.props;
@@ -21,10 +20,10 @@ const {title, coverImage, pubDate, tags } = Astro.props;
     </div>
     <div class="max-w-9xl mx-auto">
         <div class="mb-6 text-lg">
-            <DateFormatter dateString={pubDate} />
+            <DateFormatter date={pubDate} />
         </div>
         <div class="flex gap-x-2">
-        {tags.split(',').map((tag) => (
+        {tags.map((tag) => (
             <PostTag tag={tag}></PostTag>
         ))}
         </div>
