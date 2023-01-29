@@ -11,6 +11,6 @@ import prefetch from '@astrojs/prefetch'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://my-astro-site-flame.vercel.app',
+  site: 'https://my-astro-site-flame.vercel.app/',
   integrations: [mdx(), sitemap(), tailwind(), prefetch(), robotsTxt()]
 })
