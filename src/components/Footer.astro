@@ -1,10 +1,11 @@
 ---
 import logo from '../assets/logo.svg';
+import { Image } from 'astro:assets';
 ---
 <footer class="p-4 bg-white shadow md:px-6 md:py-8 dark:bg-gray-800">
 	<div class="sm:flex sm:items-center sm:justify-between">
 	<a class="flex items-center mb-4 sm:mb-0" href="/">
-		<img src={logo} class="bg-white mr-3 h-9 w-9" alt="Max Dev Logo" height="252px" width="252px"/>
+		<Image src={logo} class="bg-white mr-3 h-9 w-9" alt="Max Dev Logo" height="252" width="252"/>
 		<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
 			Full Stack Dev Blog
 		</span>

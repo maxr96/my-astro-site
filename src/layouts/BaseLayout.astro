@@ -7,7 +7,7 @@ import { SITE_DESCRIPTION } from "../config";
 interface Props {
     title: string;
     description?: string;
-    image?: string
+    image?: ImageMetadata
 }
 
 const { title, description = SITE_DESCRIPTION, image } = Astro.props

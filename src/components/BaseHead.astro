@@ -7,7 +7,7 @@ import logo from '../assets/logo.webp'
 export interface Props {
 	title: string;
 	description: string;
-	image?: string;
+	image?: ImageMetadata;
 }
 
 const { title, description, image = logo } = Astro.props;
@@ -51,11 +51,11 @@ const pageTitle = title + ' | MAX DEV'
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={new URL(image.src, Astro.url)} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={pageTitle} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={new URL(image.src, Astro.url)} />

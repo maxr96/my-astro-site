@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import '@fontsource/handlee';
 import me from '../assets/about-me/me.webp'
+import { Image } from 'astro:assets';
 
 ---
 
@@ -11,19 +12,19 @@ import me from '../assets/about-me/me.webp'
     <h1 class="text-blue-700 font-bold subpixel-antialiased text-xl dark:text-blue-300">
         Hello fellow developers 🤘
     </h1>
-    <img
+    <Image
         src={me}
         alt="My picture"
-        width="415px"
-        height="415px"
+        width="415"
+        height="415"
         class="w-52 h-52 rounded-full shadow-xl shadow-blue-500 hover:scale-110"
     />
     <div class="flex gap-5">
         <a href="https://github.com/maxr96" aria-label="My Github">
-        <Icon name="fa-brands:github" size="4x"/>
+        <Icon name="fa-brands:github" class="text-6xl"/>
         </a>
         <a href="https://www.linkedin.com/in/maksymradcuk/" aria-label="My LinkedIn">
-        <Icon name="fa-brands:linkedin" size="4x" />
+        <Icon name="fa-brands:linkedin" class="text-6xl" />
         </a>
     </div>
     <p>
@@ -48,11 +49,11 @@ import me from '../assets/about-me/me.webp'
         </span>
         - Building back-end using both{' '}
         <span class="text-violet-700 font-semibold">
-            <Icon name="fa-brands:microsoft" size="1x" class="inline-block mb-2"/> ASP.NET Core{' '}
+            <Icon name="fa-brands:microsoft" class="text-xl" class="inline-block mb-2"/> ASP.NET Core{' '}
         </span>{' '}
         and{' '}
         <span class="text-green-700 font-semibold">
-            <Icon name="fa-brands:java" size="1x" class="inline-block mb-2"/> Spring Boot
+            <Icon name="fa-brands:java" class="text-xl" class="inline-block mb-2"/> Spring Boot
         </span>{' '}
         to create both RESTful and GraphQL APIs. I have production
         experience with OrientDB with Entity Framework Core and PostgreSQL
@@ -65,26 +66,26 @@ import me from '../assets/about-me/me.webp'
         </span>
         - Building{' '}
         <span class="text-red-700 font-semibold">
-            <Icon name="fa-brands:angular" size="1x" class="inline-block mb-2"/> Angular
+            <Icon name="fa-brands:angular" class="text-xl" class="inline-block mb-2"/> Angular
         </span>{' '}
         and{' '}
         <span class="text-blue-700 font-semibold">
-            <Icon name="fa-brands:react" size="1x" class="inline-block mb-2"/> React{' '}
+            <Icon name="fa-brands:react" class="text-xl" class="inline-block mb-2"/> React{' '}
         </span>
         applications using{' '}
         <span class="text-blue-700 font-semibold">
             {' '}
-            <Icon name="fa-brands:js" size="1x" class="inline-block mb-2"/> TypeScript
+            <Icon name="fa-brands:js" class="text-xl" class="inline-block mb-2"/> TypeScript
         </span>{' '}
         ,
         <span class="text-orange-700 font-semibold">
             {' '}
-            <Icon name="fa-brands:html5" size="1x" class="inline-block mb-2"/> HTML5
+            <Icon name="fa-brands:html5" class="text-xl" class="inline-block mb-2"/> HTML5
         </span>{' '}
         and{' '}
         <span class="text-blue-700 font-semibold">
             {' '}
-            <Icon name="fa-brands:css3" size="1x" class="inline-block mb-2"/> CSS3
+            <Icon name="fa-brands:css3" class="text-xl" class="inline-block mb-2"/> CSS3
         </span>{' '}
         . Most used libraries: RxJS, D3.js, Apollo Client, Material UI,
         Ngx-Charts/Graphs and Tailwind CSS.
@@ -96,7 +97,7 @@ import me from '../assets/about-me/me.webp'
         - Manage a microservice that is hosted on{' '}
         <span class="text-yellow-700 font-semibold">
             {' '}
-            <Icon name="fa-brands:aws" size="1x" class="inline-block mb-2"/> AWS
+            <Icon name="fa-brands:aws" class="text-xl" class="inline-block mb-2"/> AWS
         </span>{' '}
         and operate inside of a set of pods in a Kubernetes cluster,
         including more in-depth experience with AWS RDS, Elasticache and
