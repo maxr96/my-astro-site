@@ -9,7 +9,7 @@ const {title, image, slug} = Astro.props;
 ---
 
 <div class="sm:mx-0">
-    <a aria-label={title} href={slug}>
+    <a aria-label={title} href={slug} data-astro-prefetch>
         <img
             src={image.src}
             width={`${image.width}px`}

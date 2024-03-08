@@ -8,10 +8,8 @@ import icon from "astro-icon";
 import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
-import prefetch from '@astrojs/prefetch'
-
-// https://astro.build/config
 export default defineConfig({
   site: 'https://my-astro-site-flame.vercel.app/',
-  integrations: [mdx(), sitemap(), tailwind(), prefetch(), robotsTxt(), icon()]
+  integrations: [mdx(), sitemap(), tailwind(), robotsTxt(), icon()],
+  prefetch: true
 })
