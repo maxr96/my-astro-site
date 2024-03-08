@@ -9,7 +9,7 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://my-astro-site-flame.vercel.app/',
+  site: 'https://maxdev.blog/',
   integrations: [mdx(), sitemap(), tailwind(), robotsTxt(), icon()],
   prefetch: true
 })

@@ -44,6 +44,8 @@
 </button>
 
 <script> 
+  document.addEventListener('astro:page-load', () => {
+
   let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
   let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
@@ -85,4 +87,5 @@
         }
     }
 });
+  });
 </script>

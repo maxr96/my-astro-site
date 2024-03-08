@@ -3,6 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 import logo from '../assets/logo.webp'
+import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
 	title: string;
@@ -59,3 +60,5 @@ const pageTitle = title + ' | MAX DEV'
 <meta property="twitter:title" content={pageTitle} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<ViewTransitions/>
