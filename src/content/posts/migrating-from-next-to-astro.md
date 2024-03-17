@@ -2,7 +2,7 @@
 title: 'Moving My Blog from Next.js to Astro'
 excerpt: 'Recently I heard a lot of praise comments about Astro. How easy it is to use it for static websites and how performant it can be due to the Zero JS by default. I decided to give it a try and share my learnings here 📘.'
 coverImage:
-  src: '../../assets/migrating-next-to-astro/cover.webp'
+  src: '../../assets/migrating-next-to-astro/cover.jpg'
   width: 819
   height: 546
 pubDate: 2022-12-27T23:33:00.001Z
