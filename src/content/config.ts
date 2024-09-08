@@ -10,7 +10,8 @@ const posts = defineCollection({
       height: z.number()
     }),
     pubDate: z.date(),
-    tags: z.array(z.string())
+    tags: z.array(z.string()),
+    isPreview: z.optional(z.boolean())
   })
 })
 
